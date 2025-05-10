@@ -82,16 +82,20 @@ geometry_git_provider_icon() {
   if [ $? -ne 0 ]; then
     return;
   fi
-  if [[ "$url" == *"github"* ]]; then
-    ansi ${GEOMETRY_GIT_COLOR_BRANCH:-242} ""
-  elif [[ "$url" == *"gitlab"* ]]; then
-    ansi ${GEOMETRY_GIT_COLOR_BRANCH:-242} ""
-  fi
+  case "$url" in
+    *"github"*)
+      ansi ${GEOMETRY_GIT_COLOR_BRANCH:-242} ""
+      ;;
+    *"gitlab"*)
+      ansi ${GEOMETRY_GIT_COLOR_BRANCH:-242} ""
+      ;;
+    *)
+      ;;
+  esac
 }
 
 geometry_git() {
   (( $+commands[git] )) || return
-
   git rev-parse 2>/dev/null || return
 
   $(git rev-parse --is-bare-repository) \
