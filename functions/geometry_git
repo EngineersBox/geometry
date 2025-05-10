@@ -108,8 +108,8 @@ geometry_git() {
     geometry_git_conflicts
     # geometry_git_time
     geometry_git_stashes
-    geometry_git_provider_icon
     geometry_git_status
+    geometry_git_provider_icon
   )
 
   geometry::wrap $PWD $git_info

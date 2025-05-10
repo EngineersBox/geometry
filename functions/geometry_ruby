@@ -18,4 +18,4 @@ local ruby_version=$match[1]
   }
 }
 
-echo -n "${(j: :):-$GEOMETRY_RUBY $ruby_version $rvm_version $gemset}"
+echo -n "${(j: :):-$GEOMETRY_RUBY $ruby_version $rvm_version $gemset} 󰴭"

@@ -131,7 +131,7 @@ geometry::rprompt() {
 }
 
 geometry::prompt() {
-  export GEOMETRY_STATUS=$status
+  GEOMETRY_STATUS=$status
   PROMPT=" $(geometry::wrap $PWD $GEOMETRY_PROMPT) "
 }
 

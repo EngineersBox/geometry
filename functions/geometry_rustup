@@ -12,5 +12,5 @@ geometry_rustup() {
     local toolchain="$(rustup show active-toolchain | head -n 1 |  cut -d '-' -f 1 2> /dev/null)"
     local rustup_color=${(e)toolchain:+\$GEOMETRY_RUSTUP_${toolchain:u}_COLOR}
 
-    ansi $rustup_color " $toolchain ${GEOMETRY_RUSTUP_SYMBOL:=⚙}"
+    ansi $rustup_color " $toolchain" # ${GEOMETRY_RUSTUP_SYMBOL:=⚙}"
 }
