@@ -19,6 +19,7 @@ autoload -Uz \
   geometry_last_command \
   geometry_docker_machine \
   geometry_echo \
+  geometry_exec_time \
   geometry_exitcode \
   geometry_git \
   geometry_hg \
